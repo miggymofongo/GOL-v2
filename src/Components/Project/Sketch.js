@@ -22,6 +22,8 @@ class Sketch extends React.Component {
             return arr;
         }
 
+        
+
         p.setup = () => {
             p.createCanvas(1000, 1000);
             cols = p.width / resolution;
