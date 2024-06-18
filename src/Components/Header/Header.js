@@ -16,20 +16,20 @@ function CollapsibleExample() {
             <Nav.Link href="https://podcast.miguelalmodo.com">Podcast</Nav.Link>
             <NavDropdown title="Projects" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="https://miggymofongo.github.io/kh_quote/">Quote Shuffler</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="https://miggymofongo.github.io/game_of_life_v2/">
                 Game of Life v2
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Coming Soon</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="https://github.com/miggymofongo">
                 Git
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Portfolio</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link href="https://miguelalmodo.com/portfolio">Portfolio</Nav.Link>
+            <Nav.Link eventKey={2} href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">
+              Tree
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
