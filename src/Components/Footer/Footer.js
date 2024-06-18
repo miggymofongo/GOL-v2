@@ -7,6 +7,7 @@ function Footer(){
         <footer>
 
 <Container fluid>
+    
     <Row className="bg-primary text-white">
          <Col><Stack><Image 
          src="https://migs.uber.space/img/WEPA.png" width={100} height={100} />
@@ -15,7 +16,7 @@ function Footer(){
          <Nav className="flex-column fs-5">
             Useful Links
             <NavLink href="https://library.miguelalmodo.com" className="text-dark">Bookshelf</NavLink>
-            <NavLink href="https://miguelalmodo.com/blog" className="text-dark">Blog</NavLink>
+            <NavLink href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs" className="text-dark">Tree</NavLink>
             <NavLink href="" className="">Main Page</NavLink>
             </Nav></Col>
          <Col>
