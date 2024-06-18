@@ -22,7 +22,7 @@ export default class App extends Component {
 <Container>
 
         <h1 className="text-center">Game of Life V2 on React feat P5js!</h1>
-        <p> Here are some directors to use the app.
+        <p> Here are some directions to use the app.
         </p>
 <Sketch />  
 </Container>
