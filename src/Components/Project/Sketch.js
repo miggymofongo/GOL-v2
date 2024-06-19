@@ -12,7 +12,7 @@ class Sketch extends React.Component {
         let grid;
         let cols;
         let rows;
-        let resolution = 50;
+        let resolution = 10;
 
         function make2DArray(cols, rows) {
             let arr = new Array(cols);
