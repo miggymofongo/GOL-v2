@@ -1,36 +1,42 @@
-import { Container, Row, Col, Stack, Image, Nav, NavLink } from "react-bootstrap"
+import React from "react"
 
-function Footer(){
+const Footer = () => <footer className="page-footer font-small blue pt-4">
+    <div className="container-fluid text-center text-md-left">
+        <div className="row">
+            <div className="col-md-6 mt-md-0 mt-3">
+            <h3 className="text-uppercase">Let's build something.</h3>
+            <p>Send me a message.</p>
+            <textarea></textarea>
+            </div>
 
-    return(
+            <hr className="clearfix w-100 d-md-none pb-0"/>
 
-        <footer>
+            <div className="col-md-3 mb-md-0 mb-3">
+                <h5 className="text-uppercase">Links</h5>
+                <ul className="list-unstyled">
+                    <li><a href="#!">Bookshelf</a></li>
+                    <li><a href="#!">Podcast</a></li>
+                    <li><a href="#!">Portfolio</a></li>
+                    <li><a href="#!">Tree</a></li>
+                </ul>
+            </div>
 
-<Container fluid>
-    
-    <Row className="bg-primary text-white">
-         <Col><Stack><Image 
-         src="https://migs.uber.space/img/WEPA.png" width={100} height={100} />
-         <h2>Miguel Almodovar</h2></Stack></Col>
-         <Col>
-         <Nav className="flex-column fs-5">
-            Useful Links
-            <NavLink href="https://library.miguelalmodo.com" className="text-dark">Bookshelf</NavLink>
-            <NavLink href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs" className="text-dark">Tree</NavLink>
-            <NavLink href="" className="">Main Page</NavLink>
-            </Nav></Col>
-         <Col>
-         <h4>Contact me!</h4>
-         <a className="text-dark" href="mailto:contact@miguelalmodo.com"><p>Email me at 
-            contact@miguelalmodo.com</p></a>
-         </Col>
+            <div className="col-md-3 mb-md-0 mb-3">
+<h3> Miguel Almodóvar
+    </h3>
+                    <ul className="list-unstyled">
+                    
+                    <li><a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">Social Media</a></li>
+                    <li><a href="https://miguelalmodo.com">Landing Page</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <div className="footer-copyright text-center py-3">© 2024 Copyright:
+        <a href="https://miguelalmodo.com/"> Miguel Almodovar</a>
+    </div>
 
-    </Row>
-</Container>
-
-        </footer>
-    )
-}
+</footer>
 
 export default Footer

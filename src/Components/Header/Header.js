@@ -3,15 +3,17 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import badge_light from './badge_light.png'
 
-function CollapsibleExample() {
+function NavigationBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="https://miguelalmodo.com">Miguel's Asteroid</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container fluid>
+        <Navbar.Brand href="https://miguelalmodo.com"><img alt="uberspace badge" src={badge_light}/>Miguel's Asteroid</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav 
+          className="me-auto">
             <Nav.Link href="https://library.miguelalmodo.com">Bookshelf</Nav.Link>
             <Nav.Link href="https://podcast.miguelalmodo.com">Podcast</Nav.Link>
             <NavDropdown title="Projects" id="collapsible-nav-dropdown">
@@ -38,4 +40,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default NavigationBar;
