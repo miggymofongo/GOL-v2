@@ -1,6 +1,8 @@
 import React from "react";
 import p5 from 'p5';
 
+/* in this react component, I am creating a p5 js
+sketch to show my game of life simulation */
 
 class Sketch extends React.Component {
     constructor(props) {
@@ -46,8 +48,8 @@ class Sketch extends React.Component {
 
         
 
-        const resetButton = p.createButton('Reset')
-        resetButton.position(250, 200);    
+        const resetButton = p.createButton('Start/Reset')
+        resetButton.position(160, 190);    
         resetButton.mousePressed(this.resetSketch);
         }    
 
