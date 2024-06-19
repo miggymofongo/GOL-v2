@@ -1,5 +1,7 @@
 import React from "react";
 import p5 from 'p5';
+import { Button } from "bootstrap";
+
 
 class Sketch extends React.Component {
     constructor(props) {
@@ -12,7 +14,6 @@ class Sketch extends React.Component {
         let cols;
         let rows;
         let resolution = 50;
-        let Pause = false
 
         function make2DArray(cols, rows) {
             let arr = new Array(cols);
@@ -34,10 +35,20 @@ class Sketch extends React.Component {
                     grid[i][j] = p.floor(p.random(2));
                 }
             }
+
+            
         }
+
+       
 
         p.draw = () => {
             p.background(0);
+            if (p.mouseIsPressed) {
+                p.fill(0);
+              } else {
+                p.fill(255);
+              }
+              p.ellipse(p.mouseX, p.mouseY, 80, 80);
             for (let i = 0; i < cols; i++) {
                 for (let j = 0; j < rows; j++) {
                     let x = i * resolution;
@@ -76,6 +87,19 @@ class Sketch extends React.Component {
             grid = next;
             
         }
+        
+    }
+    resetSketch = () => {
+        // Reset the grid with random values
+        const { cols, rows } = this.state;
+        const grid = this.make2DArray(cols, rows);
+        for (let i = 0; i < cols; i++) {
+            for (let j = 0; j < rows; j++) {
+                grid[i][j] = Math.floor(Math.random(2));
+            }
+        }
+        this.setState({ grid });
+        this.myP5.redraw(); // Force p5 to redraw using the new grid
     }
 
     componentDidMount() {
