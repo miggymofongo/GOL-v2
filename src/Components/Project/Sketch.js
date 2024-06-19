@@ -1,6 +1,5 @@
 import React from "react";
 import p5 from 'p5';
-import { Button } from "bootstrap";
 
 
 class Sketch extends React.Component {

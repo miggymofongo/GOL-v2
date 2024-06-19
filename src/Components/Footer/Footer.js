@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from "bootstrap"
 
 const Footer = () => <footer className="page-footer font-small blue pt-4">
     <div className="container-fluid text-center text-md-left">
@@ -7,6 +8,7 @@ const Footer = () => <footer className="page-footer font-small blue pt-4">
             <h3 className="text-uppercase">Let's build something.</h3>
             <p>Send me a message.</p>
             <textarea></textarea>
+            
             </div>
 
             <hr className="clearfix w-100 d-md-none pb-0"/>
