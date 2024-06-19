@@ -16,10 +16,10 @@ const Footer = () => <footer className="page-footer font-small blue pt-4">
             <div className="col-md-3 mb-md-0 mb-3">
                 <h5 className="text-uppercase">Links</h5>
                 <ul className="list-unstyled">
-                    <li><a href="#!">Bookshelf</a></li>
-                    <li><a href="#!">Podcast</a></li>
-                    <li><a href="#!">Portfolio</a></li>
-                    <li><a href="#!">Tree</a></li>
+                    <li><a href="https://library.miguelalmodo.com/">Bookshelf</a></li>
+                    <li><a href="https://podcast.miguelalmodo.com/">Podcast</a></li>
+                    <li><a href="https://miguelalmodo.com/blog">Portfolio</a></li>
+                    <li><a href="https://nostree.me/npub1ajt9gp0prf4xrp4j07j9rghlcyukahncs0fw5ywr977jccued9nqrcc0cs">Tree</a></li>
                 </ul>
             </div>
 
