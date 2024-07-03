@@ -5,12 +5,26 @@ import p5 from 'p5';
 sketch to show my game of life simulation */
 
 class Sketch extends React.Component {
+
+
     constructor(props) {
         super(props);
         this.myRef = React.createRef();
         this.cols = 0;
         this.rows = 0;
         this.grid = []
+    }
+
+    componentDidMount() {
+        this.myP5 = new p5(this.Sketch, this.myRef.current);
+    }
+
+    componentWillUnmount() {
+        this.myP5.remove();
+    }
+
+    render() {
+        return <div ref={this.myRef}></div>;
     }
 
     make2DArray = (cols, rows) => {
@@ -30,15 +44,20 @@ class Sketch extends React.Component {
         }
         this.myP5.redraw(); // Force p5 to redraw using the new grid
     }
+    
     Sketch = (p) => {
         let cols;
         let rows;
         let resolution = 10;
 
         p.setup = () => {
-            p.createCanvas(1000, 1000);
+            
+
+            p.createCanvas(500, 500);
+
+            
             this.cols = p.width / resolution;
-            this.rows = p.height / resolution;
+            this.rows = p.height / resolution; 
             this.grid = this.make2DArray(this.cols, this.rows);
             for (let i = 0; i < cols; i++) {
                 for (let j = 0; j < rows; j++) {
@@ -48,21 +67,22 @@ class Sketch extends React.Component {
 
         
 
-        const resetButton = p.createButton('Start/Reset')
-        resetButton.position(160, 190);    
+        const resetButton = p.createButton('StartGame/Reset')
+        resetButton.position(800, 180);    
         resetButton.mousePressed(this.resetSketch);
-        }    
+        
+    
+    
+    }    
 
         
 
         p.draw = () => {
             p.background(0);
-            if (p.mouseIsPressed) {
-                p.fill(0);
-              } else {
-                p.fill(255);
-              }
+         
               p.ellipse(p.mouseX, p.mouseY, 80, 80);
+
+
             for (let i = 0; i < this.cols; i++) {
                 for (let j = 0; j < this.rows; j++) {
                     let x = i * resolution;
@@ -73,7 +93,6 @@ class Sketch extends React.Component {
                         p.rect(x, y, resolution - 1, resolution - 1);
                     }
                 }
-            }
 
             let next = this.make2DArray(this.cols, this.rows);
 
@@ -99,22 +118,10 @@ class Sketch extends React.Component {
                 }
             }
             this.grid = next;
-            
-        }
-        
+        }    
     }
 
-    componentDidMount() {
-        this.myP5 = new p5(this.Sketch, this.myRef.current);
-    }
-
-    componentWillUnmount() {
-        this.myP5.remove();
-    }
-
-    render() {
-        return <div ref={this.myRef}></div>;
-    }
+   
+};
 }
-
 export default Sketch;
